@@ -1,0 +1,143 @@
+.resume-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.download-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.resume-viewer {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-height: 800px;
+  position: relative;
+}
+
+.pdf-frame {
+  width: 100%;
+  height: 850px;
+  border: none;
+  display: block;
+}
+
+.mobile-message {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+}
+
+.mobile-message p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.download-btn-mobile {
+  background: #667eea;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.loading,
+.resume-error {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.resume-error {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-error p {
+  margin: 0.5rem 0;
+  font-size: 1.125rem;
+}
+
+.resume-error p:first-child {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .resume-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-header h1 {
+    font-size: 2rem;
+  }
+
+  .pdf-frame {
+    display: none;
+  }
+
+  .mobile-message {
+    display: block;
+  }
+
+  .resume-viewer {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-page {
+    padding: 1rem;
+  }
+
+  .resume-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
